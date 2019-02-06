@@ -49,30 +49,6 @@ else:
                         else:
                             data_string = _("{section_format} due {{date}}").format(section_format=section['format'])
                %>
-                % if section['format'] or due_date or 'proctoring' in section:
-                <p class="subtitle">
-                    % if 'proctoring' in section:
-                        ## Display the proctored exam status icon and status message
-                        <span class="menu-icon icon fa ${section['proctoring'].get('suggested_icon', 'fa-pencil-square-o')} ${section['proctoring'].get('status', 'eligible')}" aria-hidden="true"></span>
-                        <span class="subtitle-name">${section['proctoring'].get('short_description', '')}</span>
-
-                        ## completed proctored exam statuses should not show the due date
-                        ## since the exam has already been submitted by the user
-                        % if not section['proctoring'].get('in_completed_state', False):
-                            <span class="localized-datetime subtitle-name" data-datetime="${section['due']}" data-string="${data_string}" data-timezone="${user_timezone}" data-language="${user_language}"></span>
-                        % endif
-                    % else:
-                        ## non-proctored section, we just show the exam format and the due date
-                        ## this is the standard case in edx-platform
-                        <span class="localized-datetime subtitle-name" data-datetime="${section['due']}" data-string="${data_string}" data-timezone="${user_timezone}" data-language="${user_language}"></span>
-
-                        % if 'graded' in section and section['graded']:
-                            <span class="menu-icon icon fa fa-pencil-square-o" aria-hidden="true"></span>
-                            <span class="sr">${_("This content is graded")}</span>
-                        % endif
-                    % endif
-                </p>
-                % endif
             </a>
         </div>
         % endfor
