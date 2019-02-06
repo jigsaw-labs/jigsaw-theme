@@ -54,7 +54,6 @@ from openedx.core.lib.courses import course_image_url
   <meta property="og:image" content="http://gymnasium.github.io/static-site-content/artwork/production/courses/gym-${course.display_number_with_default | h}-social.png" />
   <%static:css group='style-course-vendor'/>
   <%static:css group='style-course'/>
-  <link href="${static.url('css/courseware.css')}" type="stylesheet">
 
   ## Utility: Notes
 
@@ -166,3 +165,4 @@ ${HTML(fragment.foot_html())}
   </div>
 </div>
 
+  <link href="${static.url('css/courseware.css')}" type="stylesheet">

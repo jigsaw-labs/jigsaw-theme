@@ -16,6 +16,8 @@ else:
     aria_label = chapter['display_name']
     active_class = ''
 %>
+
+
 <a href="#${chapter['display_id']}-child" role="button" class="button-chapter chapter ${active_class}" id="${chapter['display_id']}-parent" aria-controls="${chapter['display_id']}-child" aria-expanded="false">
     <span class="group-heading ${active_class}" aria-label="${aria_label}">
         <span class="icon fa fa-caret-right" aria-hidden="true"></span>
