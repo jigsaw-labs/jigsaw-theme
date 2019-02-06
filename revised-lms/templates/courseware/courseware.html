@@ -20,7 +20,6 @@ from openedx.core.lib.courses import course_image_url
 
 <%block name="bodyclass">view-in-course view-courseware courseware ${course.css_class or ''}</%block>
 
-
 <%block name="title">
   <title>
     ${static.get_page_title_breadcrumbs(course_name())}
@@ -35,6 +34,13 @@ from openedx.core.lib.courses import course_image_url
 </script>
 % endfor
 
+% if settings.FEATURES.get('ENABLE_COURSEWARE_SEARCH'):
+    % for template_name in ["course_search_item", "course_search_results", "search_loading", "search_error"]:
+        <script type="text/template" id="${template_name}-tpl">
+            <%static:include path="search/${template_name}.underscore" />
+        </script>
+    % endfor
+% endif
 
 % if include_special_exams:
   % for template_name in ["proctored-exam-status"]:
@@ -54,12 +60,14 @@ from openedx.core.lib.courses import course_image_url
   <meta property="og:image" content="http://gymnasium.github.io/static-site-content/artwork/production/courses/gym-${course.display_number_with_default | h}-social.png" />
   <%static:css group='style-course-vendor'/>
   <%static:css group='style-course'/>
-  <link href="${static.url('css/courseware.css')}" type="stylesheet">
-
+  
   ## Utility: Notes
+  % if is_edxnotes_enabled(course):
+    <%static:css group='style-student-notes'/>
+  % endif
 
   <%include file="../discussion/_js_head_dependencies.html" />
-
+  
   ${HTML(fragment.head_html())}
 </%block>
 
@@ -98,10 +106,15 @@ ${HTML(fragment.foot_html())}
 
 <div class="message-banner" aria-live="polite"></div>
 
+% if default_tab:
+  <%include file="/courseware/course_navigation.html" />
+% else:
+  <%include file="/courseware/course_navigation.html" args="active_page='courseware'" />
+% endif
 
-<link rel="stylesheet" href="${static.url('css/courseware.css')}" title="" type="text/css">
 <div class="container">
   <div class="row">
+    <div class="course-wrapper">
 
           <div class="col-sm-3 no-right-pad">
             <div class="course-index">
@@ -126,6 +139,7 @@ ${HTML(fragment.foot_html())}
               </div>
             </div>
           </div>
+      % endif
 
       <section class="col-sm-9 no-left-pad">
         <div class="course-content" id="course-content">
@@ -169,9 +183,12 @@ ${HTML(fragment.foot_html())}
           <div id="loading-message" aria-live="polite" aria-relevant="all"></div>
           <div id="error-message" aria-live="polite"></div>
           <div class="courseware-results search-results col-md-12" data-course-id="${course.id}" data-lang-code="${language_preference}"></div>
+        </div>
       </section>
 
     </div>
   </div>
 </div>
 
+
+<%include file="../modal/accessible_confirm.html" />
