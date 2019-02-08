@@ -30,14 +30,14 @@
   <div id="seq_content" role="tabpanel"></div>
   % endif
 
-  <nav class="sequence-bottom" aria-label="${_('Section')}">
-    <button class="sequence-nav-button button-previous">
-      <span class="icon fa fa-chevron-prev" aria-hidden="true"></span>
-      <span>${_('Previous')}</span>
-    </button>
-    <button class="sequence-nav-button button-next">
-      <span>${_('Next')}</span>
-      <span class="icon fa fa-chevron-next" aria-hidden="true"></span>
-    </button>
+  <div class="container" aria-label="${_('Section')}">
+    <div class="row justify-content-end m-0" >
+      <div class="col-1.5 pb-3 pr-0">
+        <button class="example_a rounded-pill btn-large">
+          <span>${_('Next')}</span>
+          <span class="icon fa fa-chevron-next" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
   </nav>
 </div>
