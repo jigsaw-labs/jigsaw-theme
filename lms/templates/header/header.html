@@ -30,7 +30,7 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
     </%block>
 % endif
 
-<header class="global-header add-colors ${'slim' if course else ''}">
+<header class="global-header  ${'slim' if course else ''}">
     % if use_cookie_banner:
         ${static.renderReact(
             component="CookiePolicyBanner",

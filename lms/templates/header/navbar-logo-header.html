@@ -20,7 +20,7 @@ from branding import api as branding_api
     </%block>
   </a>
   % if course:
-    <div class="course-header add-colors">
+    <div class="course-header">
       <%
       display_name = course.display_name_with_default
       if settings.FEATURES.get('CUSTOM_COURSES_EDX', False):
