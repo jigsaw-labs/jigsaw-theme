@@ -37,6 +37,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
 
 <%namespace name='static' file='../static_content.html'/>
 
+
 <li class="course-item" style="padding-right: 10px;">
   % if display_course_modes_on_dashboard:
     <%
@@ -58,18 +59,23 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
         % if getattr(course_overview, 'language'):
           lang="${course_overview.language}"
         % endif
-      >
+          >
+          <div class="course-card-background"></div>
 <article class="course${mode_class}" aria-labelledby="course-title-${enrollment.course_id}" id="course-card-${course_card_index}">
   <div class="CustomizedCard">
     <div class="CustomizedCard__header">
-      <div class="CustomizedCard__tagline">Customized for</div>
-      <img class="CustomizedCard__icon" src="https://assets.curology.com/media/63b25bcc984d1e0c69b9bb5223b598fc.jpg" data-src="https://assets.curology.com/media/63b25bcc984d1e0c69b9bb5223b598fc.jpg" data-srcset="https://assets.curology.com/media/6f2e36f3bcc58df968cb820b7f62c193.jpg 2x" alt="Jaya" srcset="https://assets.curology.com/media/6f2e36f3bcc58df968cb820b7f62c193.jpg 2x"> <div class="CustomizedCard__name">Jaya</div>
+      <div class="CustomizedCard__tagline">Introduction to Data Science</div>
+      <img class="card-image" src="${static.url("images/scatter-no-canada.svg")}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}" itemprop="logo" />
     </div>
     <ul class="CustomizedCard__conditions">
-      <li class="CustomizedCard__condition "> Add in content here. </li>
-      <li class="CustomizedCard__condition "> Add in content here. </li>
-      <li class="CustomizedCard__condition "> Add in content here. </li>
-      <li class="CustomizedCard__condition "> Add in content here. </li>
+      <li class="card-list-title"> Python </li>
+      <li class="card-list-title"> Statistics </li>
+    </ul>
+    <ul class="CustomizedCard__conditions">
+      <li class="CustomizedCard__condition "> Data Structures </li>
+      <li class="CustomizedCard__condition "> Correlation </li>
+      <li class="CustomizedCard__condition "> Functions </li>
+      <li class="CustomizedCard__condition "> Linear Regression </li>
     </ul>
   </div>
   <% course_target = reverse(course_home_url_name(course_overview.id), args=[unicode(course_overview.id)]) %>
