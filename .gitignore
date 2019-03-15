@@ -6,5 +6,4 @@
 
 ### compiled theme sass ###
 lms/static/css/gymnasium.css
-lms/static/css/lms-main.css
-lms/static/css/
+t :lms/static/css/lms-main.css

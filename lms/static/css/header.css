@@ -1,0 +1,107 @@
+
+@font-face {
+  font-family: 'larsseit';
+  src: url('../static/fonts/larsseit-medium.otf')  format("truetype");
+}
+
+a.tab-nav-link {
+  font-family: larsseit;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+span.username {
+  font-family: larsseit;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: capitalize;
+}
+.add-colors {
+  color: #ebebeb !important;
+  background-color: #444 !important;
+  font-family: brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif !important;
+}
+
+.add-top-border {
+  border-top: 4px solid rgba(248,151,32,0.9)
+}
+
+.global-header {
+  border-bottom: none;
+}
+
+
+@media(min-width:992px){
+
+  .global-header .nav-links .main .nav-tab {
+    padding: 0px 16px;
+  }
+
+  .global-header .secondary .nav-links .main .nav-tab a {
+    color: #332E56;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .global-header .nav-links .main .nav-tab a.active {
+    border-bottom-color: #332E56;
+    border-bottom: 1px solid;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .global-header .nav-links .main .nav-tab a:hover {
+    border-bottom-color: #332E56;
+    border-bottom: 1px solid;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .header .nav-links .main .nav-tab a:hover {
+    border-bottom-color: #332E56;
+    border-bottom-style: solid;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .global-header .nav-links .main .nav-tab a {
+    padding: 0px 0px 0px 0px;
+    border-bottom: 1px solid transparent;
+    color: #332e56;
+  }
+
+
+  .global-header .nav-links .secondary .nav-tab .nav-item a {
+    color: #332e56;
+  }
+
+  .username {
+    color: #332E56;
+  }
+
+  .toggle-user-dropdown {
+    color: #332E56;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+
+.wrapper-footer {
+  background: #f8f8fa;
+  border-top: 0px;
+  height: 250px;
+}
+
+html, body, .window-wrap {
+  height: 100%
+}
+

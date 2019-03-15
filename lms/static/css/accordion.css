@@ -1,0 +1,8 @@
+
+.course-index {
+  color: #ebebeb !important;
+  border-right: none !important;
+  border-radius: 0 !important;
+  display: block !important;
+  transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s;
+}

@@ -1,0 +1,21 @@
+#example_a {
+color: #fff !important;
+text-transform: uppercase !important;
+background: #ed3330 !important;
+padding: 20px !important;
+border-radius: 7px !important;
+display: inline-block !important;
+border: none !important;
+background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
+}
+
+
+#example_a:hover {
+background: #434343 !important;
+letter-spacing: 1px !important;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57) !important;
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57) !important;
+box-shadow: 5px 40px -10px rgba(0,0,0,0.57) !important;
+background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
+transition: all 0.4s ease 0s !important;
+}
