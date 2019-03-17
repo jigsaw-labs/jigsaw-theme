@@ -1,6 +1,7 @@
 <%page expression_filter="h"/>
 <%inherit file="/main.html" />
 <%namespace name='static' file='/static_content.html'/>
+<link href="${static.url('css/courseware_sidebar.css')}" type="stylesheet" />
 <%def name="online_help_token()"><% return "courseware" %></%def>
 <%!
 from django.utils.translation import ugettext as _
@@ -102,30 +103,31 @@ ${HTML(fragment.foot_html())}
 <div class="container">
   <div class="row">
 
-          <div class="col-sm-2 no-right-pad add-colors">
-            <div class="course-index" style=" border-right: 0px;">
-              <div class="accordion">
-                <nav class="course-navigation" aria-label="${_('Course')}">
-                  % if accordion.strip():
-                    ${HTML(accordion)}
-                  % else:
-                    <div class="chapter">${_("No content has been added to this course")}</div>
-                  % endif
-                </nav>
-              </div>
-            </div>
-          </div>
+    <div class="nav is-active">
+      <div class="nav-edition">
+        <div class="bubble bubble--edition">
+        </div>
+        <div class="nav-title">Disinformation</div>
+      </div>
+      <div class="nav-menu">
+        % if accordion.strip():
+        ${HTML(accordion)}
+        % else:
+        <div class="chapter">${_("No content has been added to this course")}</div>
+        % endif
+      </div>
+    </div>
 
-      <section class="col-sm-9 no-left-pad">
-        <div class="course-content" id="course-content">
-          <main id="main" aria-label="Content" tabindex="-1">
-            % if getattr(course, 'entrance_exam_enabled') and \
-              getattr(course, 'entrance_exam_minimum_score_pct') and \
-              entrance_exam_current_score is not UNDEFINED:
-                % if not entrance_exam_passed:
-                <p class="sequential-status-message">
-                    ${_('To access course materials, you must score {required_score}% or higher on this \
-                    exam. Your current score is {current_score}%.').format(
+    <section class="col-sm-9 no-left-pad">
+      <div class="course-content" id="course-content">
+        <main id="main" aria-label="Content" tabindex="-1">
+        % if getattr(course, 'entrance_exam_enabled') and \
+        getattr(course, 'entrance_exam_minimum_score_pct') and \
+        entrance_exam_current_score is not UNDEFINED:
+        % if not entrance_exam_passed:
+        <p class="sequential-status-message">
+        ${_('To access course materials, you must score {required_score}% or higher on this \
+        exam. Your current score is {current_score}%.').format(
                         required_score=int(round(course.entrance_exam_minimum_score_pct * 100)),
                         current_score=int(round(entrance_exam_current_score * 100))
                     )}
@@ -164,4 +166,4 @@ ${HTML(fragment.foot_html())}
   </div>
 </div>
 
-  <link href="${static.url('css/courseware.css')}" type="stylesheet">
+  <link href="${static.url('css/courseware.css')}" type="stylesheet"/>

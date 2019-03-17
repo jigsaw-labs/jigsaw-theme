@@ -1,87 +1,7 @@
-.row {
-display: flex !important;
+
+body {
+  background: blue;
 }
-
-.course-content {
-  padding-left: 15px;
-}
-
-
-
-.span.group-heading {
-  color: #ebebeb;
-}
-
-/* setting the color */
-
-.course-index .accordion .course-navigation .button-chapter {
-  color: #ebebeb !important;
-  box-shadow: none !important;
-  background-color: #444 !important;
-  background-image: none !important;
-  border-right: 0px !important;
-}
-
-.menu-item:not(.active) p.accordion-display-name {
-  color: #ebebeb !important;
-}
-
-.menu-item.active p.accordion-display-name {
-  color: orange !important;
-}
-
-.button-chapter.active .group-heading {
-  color: #ebebeb !important;
-}
-
-a.accordion-nav {
-  background-color: #444 !important;
-}
-
-
-.chapter-menu.is-open {
-  color: #ebebeb !important;
-  box-shadow: none !important;
-  background-color: #444 !important;
-  background-image: none !important;
-}
-
-.chapter-menu {
-  color: #ebebeb !important;
-  box-shadow: none !important;
-  background-color: #444 !important;
-  background-image: none !important;
-}
-.course-index .accordion .course-navigation .chapter-content-container.is-open {
-  border-bottom: 1px solid #3d3b3b !important;
-}
-
-.menu-item.active a {
-    background: #444 !important;
-}
-
-.menu-item a:hover {
-    background: #444 !important;
-}
-
-p.accordion-display-name:hover {
-    background: #444 !important;
-}
-
-.container>div {
-  border: 0px !important;
-}
-
-.active span.icon.fa.fa-caret-down {
-  color: orange !important;
-}
-
-
-
-
-
-/* Navbar */
-
 @media(min-width: 768px){
   .nav {
     display: block;
@@ -94,6 +14,7 @@ p.accordion-display-name:hover {
     line-height: 32px;
   }
 }
+
 
 
 .nav, .nav-arrow__wrapper {

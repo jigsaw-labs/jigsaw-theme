@@ -56,9 +56,51 @@ else:
 </div>
 </%def>
 
-% for chapter in toc:
-    ${make_chapter(chapter)}
-% endfor
+
+<%def name="make_updated_chapter(chapter)">
+
+<%
+if chapter.get('active'):
+    aria_label = _('{chapter} current chapter').format(chapter=chapter['display_name'])
+    active_class = 'active'
+else:
+    aria_label = chapter['display_name']
+    active_class = ''
+%>
+
+
+<li>
+  <a href="#${chapter['display_id']}-child" ${active_class}" id="${chapter['display_id']}-parent" aria-controls="${chapter['display_id']}-child" aria-expanded="false">
+    <span class="icon fa fa-caret-right" aria-hidden="true"></span>
+    ${HTML(chapter['display_name'])}
+  </a>
+</li>
+</%def>
+
+
+
+<ul class="nav-menu__items">
+  % for chapter in toc:
+    ${make_updated_chapter(chapter)}
+  % endfor
+</ul>
+<div class="nav-menu__submenu">
+  <div class="submenu is-active" data-slug="armed-conflict" data-id="3">
+    <div class="story story--garnet story--isInRelated">
+      <a class="story__inner" href="https://codastory.com/disinformation/armed-conflict/polluted-by-a-war-of-words/">
+        <div class="story-meta story-meta--main">
+          <div class="story-meta__item">
+            <div class="story-time">7m read</div>
+          </div>
+        </div>
+        <div class="story-headline">
+          <span class="story-title">Polluted By A War of Words</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
 
 
 % if toc:
