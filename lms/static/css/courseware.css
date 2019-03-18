@@ -333,9 +333,9 @@ a {
     -o-transition: transform .35s ease;
     transition: transform .35s ease;
     transition: transform .35s ease,-webkit-transform .35s ease;
-    -webkit-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    transform: translateX(100%);
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 
 

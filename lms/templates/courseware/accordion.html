@@ -78,6 +78,23 @@ else:
 </%def>
 
 
+<%def name="make_updated_sections(chapter)">
+% for section in chapter['sections']:
+    <div class="story story--garnet story--isInRelated">
+      <a class="story__inner" href="${reverse('courseware_section', args=[course_id, chapter['url_name'], section['url_name']])}">
+        <div class="story-meta story-meta--main">
+          <div class="story-meta__item">
+            <div class="story-time">7m read</div>
+          </div>
+        </div>
+        <div class="story-headline">
+          <span class="story-title">  ${HTML(section['display_name'])}</span>
+        </div>
+      </a>
+    </div>
+% endfor
+</%def>
+
 
 <ul class="nav-menu__items">
   % for chapter in toc:
@@ -85,19 +102,10 @@ else:
   % endfor
 </ul>
 <div class="nav-menu__submenu">
-  <div class="submenu is-active" data-slug="armed-conflict" data-id="3">
-    <div class="story story--garnet story--isInRelated">
-      <a class="story__inner" href="https://codastory.com/disinformation/armed-conflict/polluted-by-a-war-of-words/">
-        <div class="story-meta story-meta--main">
-          <div class="story-meta__item">
-            <div class="story-time">7m read</div>
-          </div>
-        </div>
-        <div class="story-headline">
-          <span class="story-title">Polluted By A War of Words</span>
-        </div>
-      </a>
-    </div>
+  <div class="submenu" data-slug="armed-conflict" data-id="3">
+  % for chapter in toc:
+    ${make_updated_sections(chapter)}
+  % endfor
   </div>
 </div>
 
