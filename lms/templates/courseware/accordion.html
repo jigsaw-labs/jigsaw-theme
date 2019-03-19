@@ -70,7 +70,7 @@ else:
 
 
 <li>
-  <a href="#${chapter['display_id']}-child" ${active_class}" id="${chapter['display_id']}-parent" aria-controls="${chapter['display_id']}-child" aria-expanded="false">
+  <a href="#${chapter['display_id']}-child" ${active_class}" data-slug="armed-conflict" data-id="${chapter['display_id']}" id="${chapter['display_id']}-parent" aria-controls="${chapter['display_id']}-child" aria-expanded="false">
     <span class="icon fa fa-caret-right" aria-hidden="true"></span>
     ${HTML(chapter['display_name'])}
   </a>
@@ -102,11 +102,11 @@ else:
   % endfor
 </ul>
 <div class="nav-menu__submenu">
-  <div class="submenu" data-slug="armed-conflict" data-id="3">
   % for chapter in toc:
-    ${make_updated_sections(chapter)}
+    <div class="submenu" data-id="${chapter['display_id']}">
+      ${make_updated_sections(chapter)}
+    </div>
   % endfor
-  </div>
 </div>
 
 
