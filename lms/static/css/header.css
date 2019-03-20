@@ -4,6 +4,7 @@
   src: url('../static/fonts/larsseit-medium.otf')  format("truetype");
 }
 
+
 a.tab-nav-link {
   font-family: larsseit;
   font-size: 12px;
@@ -31,13 +32,13 @@ span.username {
 
 .global-header {
   border-bottom: none;
+  position: sticky;
 }
 
-
 @media(min-width:992px){
-
   .global-header .nav-links .main .nav-tab {
     padding: 0px 16px;
+    position: sticky;
   }
 
   .global-header .secondary .nav-links .main .nav-tab a {

@@ -24,6 +24,7 @@ body {
 }
 
 
+
 @media only screen and (min-width: 768px){
   .nav-edition {
     padding-right: 60px;
@@ -83,11 +84,7 @@ body {
     top: 16px;
 }
 
-.nav.is-active .nav-edition:after {
-    -webkit-transform: translateY(2px) rotate(45deg);
-    -ms-transform: translateY(2px) rotate(45deg);
-    transform: translateY(2px) rotate(45deg);
-}
+
 
 .nav-edition:after {
     -webkit-transform: translateY(-1px);

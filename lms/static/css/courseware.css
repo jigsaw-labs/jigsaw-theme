@@ -110,8 +110,23 @@ p.accordion-display-name:hover {
   }
 }
 
+.one-edge-shadow {
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+}
+
+.shadow {
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+}
+
 .nav-edition {
-    position: relative;
+    padding-top: 18px;
+    padding-left: 55px;
+    position: absolute;
+    top: 0px;
     z-index: 10;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -123,7 +138,6 @@ p.accordion-display-name:hover {
     -webkit-box-direction: normal;
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
-    height: 100%;
     padding-left: 43px;
     cursor: pointer;
     -webkit-user-select: none;
@@ -152,20 +166,21 @@ p.accordion-display-name:hover {
 
 }
 
-.nav-edition:after, .nav-edition:before {
-    position: absolute;
-    left: 14px;
-    width: 20px;
-    height: 2px;
-    content: "";
-    background-color: silver;
-    top: 16px;
-}
 
 .nav.is-active .nav-edition:after {
     -webkit-transform: translateY(2px) rotate(45deg);
     -ms-transform: translateY(2px) rotate(45deg);
     transform: translateY(2px) rotate(45deg);
+}
+
+.nav.is-active .nav-edition:before {
+    -webkit-transform: translateY(2px) rotate(45deg);
+    -ms-transform: translateY(2px) rotate(45deg);
+    transform: translateY(2px) rotate(45deg);
+}
+
+.nav.is-active .nav-edition:after {
+  transform: translateX(-1px) translateY(2px) rotate(-45deg)
 }
 
 .nav-edition:after {
@@ -189,12 +204,12 @@ p.accordion-display-name:hover {
 
 .nav-edition:after, .nav-edition:before {
     position: absolute;
-    left: 14px;
+    left: 19px;
     width: 20px;
     height: 2px;
     content: "";
-    background-color: silver;
-    top: 16px;
+    background-color: #332E56;
+    top: 30px;
 }
 
 
@@ -391,4 +406,26 @@ a {
     color: #000;
 }
 
+.preview-menu {
+  display: none;
+}
+
+.global-header .header-logo a {
+    margin-left: 329px;
+}
+
+.header-logo a {
+    padding-left: 25px;
+    border-left: 1px solid hsla(0,0%,59%,.27);
+}
+
+.nav-title {
+    font-family: larsseit;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1.3px;
+    text-transform: capitalize;
+    margin-left: 26px;
+    color: #332E56;
+}
 
