@@ -1,0 +1,5 @@
+.notebook_app.command_mode {
+  div#header {
+    display: none;
+  }
+}
