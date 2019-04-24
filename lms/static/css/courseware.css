@@ -105,7 +105,7 @@ p.accordion-display-name:hover {
 
 @media only screen and (min-width: 768px){
   .nav-edition {
-    padding-right: 60px;
+    padding-right: 0px;
     padding-left: 22px;
   }
 }
@@ -122,9 +122,15 @@ p.accordion-display-name:hover {
   box-shadow:         3px 3px 5px 6px #ccc;
 }
 
+.nav-up {
+  margin-top: -54px;
+
+}
+
 .nav-edition {
     padding-top: 18px;
     padding-left: 55px;
+    padding-right: 0px;
     position: absolute;
     top: 0px;
     z-index: 10;
