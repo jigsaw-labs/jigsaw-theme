@@ -102,11 +102,12 @@ ${HTML(fragment.foot_html())}
 <div class="container">
   <div class="row">
 
-    <div class="nav" style="margin-top: -54px">
-      <div class="nav-edition">
+    <div class="nav col-sm-3" style="margin-top: -54px">
+      <div class="hamburger-menu"> </div>
+      <div class="nav-edition" style="padding-right: 0px;">
         <div class="bubble bubble--edition">
         </div>
-        <div class="nav-title">${course.display_name_with_default}</div>
+        <div class="nav-title" style="margin-top: -6px; margin-left: 19px; color: #332E56; font-size: 15px; line-height: 1.1;">${course.display_name_with_default}</div>
       </div>
       <div class="nav-menu">
         % if accordion.strip():

@@ -215,7 +215,8 @@ p.accordion-display-name:hover {
     height: 2px;
     content: "";
     background-color: #332E56;
-    top: 30px;
+    top: 18px;
+    opacity: .7;
 }
 
 
@@ -322,9 +323,10 @@ a {
 .nav-menu {
     position: absolute;
     z-index: 5;
-    top: 0;
+    top: -23%;
     left: 0;
     right: 0;
+    width: 104%;
     visibility: hidden;
     height: 100vh;
     box-shadow: 0 10px 40px 0 rgba(0,0,0,.1);
@@ -427,11 +429,11 @@ a {
 
 .nav-title {
     font-family: larsseit;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 400;
-    letter-spacing: 1.3px;
+    letter-spacing: 1.4px;
+    line-height: 1.3em;
     text-transform: capitalize;
-    margin-left: 26px;
     color: #332E56;
 }
 
