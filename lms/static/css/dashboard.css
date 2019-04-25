@@ -45,7 +45,7 @@ h2.header-courses {
     color: #332e56;
 }
 
-div.CustomizedCard:hover {
+div.ActivatedCustomizedCard:hover {
   box-shadow: 0 10px 40px 0 rgba(0,0,0,.9);
   transition: box-shadow 0.5s ease;
 }
