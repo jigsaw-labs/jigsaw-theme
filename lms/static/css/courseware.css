@@ -12,6 +12,12 @@ display: flex !important;
   color: #ebebeb;
 }
 
+
+.story__inner {
+  font-size: 20px;
+  font-weight: 340;
+}
+
 /* setting the color */
 
 .course-index .accordion .course-navigation .button-chapter {
@@ -239,20 +245,6 @@ p.accordion-display-name:hover {
   }
 }
 
-.nav-menu {
-    position: absolute;
-    z-index: 5;
-    top: 0;
-    left: 0;
-    right: 0;
-    visibility: hidden;
-    height: 100vh;
-    box-shadow: 0 10px 40px 0 rgba(0,0,0,.1);
-    -webkit-transition: opacity .35s ease,visibility .35s ease;
-    -o-transition: opacity .35s ease,visibility .35s ease;
-    transition: opacity .35s ease,visibility .35s ease;
-    opacity: 0;
-}
 
 
 @media (min-width: 768px){
@@ -272,18 +264,20 @@ p.accordion-display-name:hover {
 
 .nav-menu__items {
   padding-top: 0px;
-  height: 78%;
+  background: #fafafa;
+  height: 100%;
+  margin-left: -2px;
   margin: 0;
   padding: 60px 40px 0 39px;
   list-style: none;
   text-align: right;
   letter-spacing: -1px;
-  background: #fafafa;
   -webkit-box-shadow: -2px 4px 4px 0 rgba(0,0,0,.21);
   box-shadow: -2px -5px 4px 0 rgba(0,0,0,.21);
   font-size: 22px;
   font-weight: 800;
 }
+
 
 ul, menu, dir {
     display: block;
@@ -319,23 +313,23 @@ ul, menu, dir {
     font-size: 18px;
 }
 
-.nav-menu__items a:hover {
-  color: #706c87;
+
+a:not(.btn){
+
 }
-.nav-menu__items a:active {
+
+.nav-menu__items a:hover, .nav-menu__items a:active, .nav-menu__items a:visited, .nav-menu__items a:focus {
   color: #706c87;
 }
 a {
     text-decoration: none;
     color: #000;
-}
-
-a {
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
 }
 
 .nav-menu {
+  background: #fafafa;
     position: absolute;
     z-index: 5;
     top: -23%;
@@ -380,7 +374,6 @@ a {
 
 .submenu {
     position: absolute;
-    z-index: -1;
     top: 0;
     bottom: 0;
     overflow-y: auto;
@@ -388,12 +381,10 @@ a {
     background: #fff;
     -webkit-box-shadow: none;
     box-shadow: none;
-}
-
-  .submenu {
     left: 100%;
     right: auto;
     width: 320px;
+    z-index: -8;
   }
 .story--isInRelated {
     margin-bottom: 24px;
@@ -434,7 +425,7 @@ a {
 }
 
 .global-header .header-logo a {
-    margin-left: 329px;
+    margin-left: 24%;
 }
 
 .header-logo a {
