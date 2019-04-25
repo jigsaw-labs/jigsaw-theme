@@ -20289,7 +20289,7 @@ body.view-in-course footer#footer-edx-v3 {
 
     .global-header .nav-links .secondary .dropdown-user-menu {
         border: 1px solid #313131;
-        position: absolute;
+        position: fixed;
         background-color: #fff;
         color: #313131;
         right: 30px;
