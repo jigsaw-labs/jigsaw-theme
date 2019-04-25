@@ -41,9 +41,10 @@ from pipeline_mako import render_require_js_path_overrides
 <%def name="pagetitle()" />
   <%block name="title">
       <title>
-       ${static.get_page_title_breadcrumbs(self.pagetitle())}
+        Jigsaw Labs - Learn Data Science in our 10 week course
       </title>
   </%block>
+   <link rel="icon" type="image/x-icon" href="https://www.jigsawlabs.co/assets/light-puzzle-piece-b8c4ffbcddb7c35b7a833f519165ff5dd7dcfbadde4b047877e3b6637066a715.ico" />
 
   % if not allow_iframing:
       <script type="text/javascript">
