@@ -192,3 +192,32 @@ ${HTML(fragment.foot_html())}
 
 
   </script>
+  <script>
+    if(window.attachEvent) {
+      window.attachEvent('onload', yourFunctionName);
+    } else {
+      if(window.onload) {
+        var curronload = window.onload;
+        var newonload = function(evt) {
+          curronload(evt);
+          yourFunctionName(evt);
+        };
+        window.onload = newonload;
+      } else {
+        window.onload = yourFunctionName;
+      }
+    }
+
+    function yourFunctionName(){
+      let userName = document.querySelector('span.username').textContent;
+      let userNameSrc = '/' + userName + '/'
+      let iframes = Array.from(document.querySelectorAll('iframe[src^="https://desktop.jigsawlabs"]'))
+      iframes.forEach(function(jupyterLabIframe){
+
+
+      let iframeSrc = jupyterLabIframe.src.replace(/(?<=user)\/.*?\//, userNameSrc)
+      jupyterLabIframe.src = iframeSrc;
+      })
+    }
+
+  </script>
