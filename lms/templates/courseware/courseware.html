@@ -192,6 +192,45 @@ ${HTML(fragment.foot_html())}
 
 
   </script>
+  <style type="text/css" media="all">
+
+    .nav-menu {
+      background: #fafafa;
+      position: fixed;
+      width: 353px;
+      overflow-y: scroll;
+      top: 69px;
+      bottom: 0;
+    }
+
+    .global-header {
+      position: fixed;
+      overflow-y: scroll;
+      top: 0;
+      z-index: 7;
+    }
+
+    .vert-mod {
+      overflow: hidden;
+      width: 1000px;
+    }
+
+    .vert-mod p {
+      width: 95%;
+      overflow: hidden;
+      margin-left: -100px;
+    }
+
+    iframe[src^="https://desktop.jigsawlabs"] {
+      top: -132px;
+      position: relative;
+      width: 115%;
+      overflow: hidden;
+    }
+
+
+
+  </style>
   <script>
     if(window.attachEvent) {
       window.attachEvent('onload', yourFunctionName);
