@@ -268,12 +268,12 @@ p.accordion-display-name:hover {
   height: 100%;
   margin-left: -2px;
   margin: 0;
-  padding: 60px 40px 0 39px;
+  padding: 0px 40px 0 39px;
   list-style: none;
   text-align: right;
   letter-spacing: -1px;
   -webkit-box-shadow: -2px 4px 4px 0 rgba(0,0,0,.21);
-  box-shadow: -2px -5px 4px 0 rgba(0,0,0,.21);
+  box-shadow: 0px 1px 0px 1px rgba(0,0,0,0.1);
   font-size: 22px;
   font-weight: 800;
 }
@@ -290,6 +290,7 @@ ul, menu, dir {
 }
 
 .nav-menu__items li:first-child {
+  margin-top: -120%;
 }
 
 .nav-menu__items li:last-child {
@@ -330,12 +331,14 @@ a {
 
 .nav-menu {
   background: #fafafa;
-    position: absolute;
+  overflow-y: visible;
+  position: fixed;
     z-index: 5;
-    top: -23%;
+    top: 69px;
+    bottom: 0;
     left: 0;
     right: 0;
-    width: 104%;
+    width: 25%;
     visibility: hidden;
     height: 100vh;
     box-shadow: 0 10px 40px 0 rgba(0,0,0,.1);
@@ -351,7 +354,7 @@ a {
     -ms-transform: translateX(0);
     transform: translateX(0);
     -webkit-box-shadow: -1px 0 3px 0 rgba(0,0,0,.21);
-    box-shadow: -1px 0 7px 0 rgba(0,0,0,.21);
+    box-shadow: 1px 0 1px 0 rgba(0,0,0,.1);
   }
 }
 
