@@ -82,11 +82,6 @@ else:
 % for section in chapter['sections']:
     <div class="story story--garnet story--isInRelated">
       <a class="story__inner" href="${reverse('courseware_section', args=[course_id, chapter['url_name'], section['url_name']])}">
-        <div class="story-meta story-meta--main">
-          <div class="story-meta__item">
-            <div class="story-time">7m read</div>
-          </div>
-        </div>
         <div class="story-headline">
           <span class="story-title">  ${HTML(section['display_name'])}</span>
         </div>
