@@ -98,7 +98,7 @@ span.username {
 .wrapper-footer {
   background: #f8f8fa;
   border-top: 0px;
-  height: 250px;
+  padding: 0px;
 }
 
 html, body, .window-wrap {
