@@ -281,6 +281,7 @@ a {
 
 .story {
     width: 100%;
+    margin-top: 20px;
 }
 
 .story--isInRelated .story__inner {
