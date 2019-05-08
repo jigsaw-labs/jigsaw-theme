@@ -446,3 +446,7 @@ a {
     color: #332E56;
 }
 
+h2.unit-title {
+  display: none;
+}
+
