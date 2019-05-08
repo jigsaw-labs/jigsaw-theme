@@ -20020,7 +20020,8 @@ button.ccx-button-link:focus {
 }
 
 body.view-in-course {
-    background-color: #fff
+    background-color: #fff;
+    padding-left: 0px;
 }
 
 body.view-in-course .header-global,body.view-in-course .header-global.slim {
