@@ -3,7 +3,7 @@ display: flex !important;
 }
 
 .course-content {
-  padding-left: 15px;
+  padding-right: 85px;
 }
 
 
@@ -91,8 +91,11 @@ p.accordion-display-name:hover {
 @media(min-width: 768px){
   .nav {
     display: block;
-    height: 60px;
-    width: 330px;
+    margin-top: -1px;
+    z-index: 8;
+    top: 68px;
+    position: fixed;
+    bottom: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
     border-left: 1px solid hsla(0,0%,59%,.27);
@@ -290,7 +293,6 @@ ul, menu, dir {
 }
 
 .nav-menu__items li:first-child {
-  margin-top: -120%;
 }
 
 .nav-menu__items li:last-child {
@@ -332,15 +334,15 @@ a {
 .nav-menu {
   background: #fafafa;
   overflow-y: visible;
-  position: fixed;
+  position: static;
     z-index: 5;
-    top: 69px;
     bottom: 0;
     left: 0;
     right: 0;
-    width: 25%;
+    width: 101%;
+    min-width: 235px;
+    height: 100%;
     visibility: hidden;
-    height: 100vh;
     box-shadow: 0 10px 40px 0 rgba(0,0,0,.1);
     -webkit-transition: opacity .35s ease,visibility .35s ease;
     -o-transition: opacity .35s ease,visibility .35s ease;
