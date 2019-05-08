@@ -375,8 +375,6 @@ a {
     transform: translateX(-100%);
   }
 
-
-
 .submenu {
     position: absolute;
     top: 0;
@@ -386,9 +384,9 @@ a {
     background: #fff;
     -webkit-box-shadow: none;
     box-shadow: none;
-    left: 100%;
+    left: 98%;
     right: auto;
-    width: 320px;
+    width: 280px;
     z-index: -8;
   }
 .story--isInRelated {
