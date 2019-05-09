@@ -1,9 +1,0 @@
-## mako
-<%! from django.core.urlresolvers import reverse %>
-<%namespace name='static' file='/static_content.html'/>
-<%inherit file="/navigation.html"/>
-
-## TODO: this will eventually be moved to the Sass
-<%block name="navigation_logo">
-  <img class="gymnasium-logo" src="${static.url('images/gymnasiumLogo.png')}" alt="Home Page" />
-</%block>
