@@ -29,7 +29,7 @@ from student.models import CourseEnrollment
 <%block name="pagetitle">${_("Dashboard")}</%block>
 <%block name="bodyclass">view-dashboard is-authenticated</%block>
 
-<link rel="stylesheet" href="${static.url('css/dashboard.css')}" title="" type="text/css">
+<link rel="stylesheet" href="https://storage.googleapis.com/learn.jigsawlabs.co/static/css/dashboard.css" title="" type="text/css">
 <%block name="header_extras">
 % for template_name in ["donation"]:
 <script type="text/template" id="${template_name}-tpl">
