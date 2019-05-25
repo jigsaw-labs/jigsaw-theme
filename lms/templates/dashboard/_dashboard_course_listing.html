@@ -63,11 +63,11 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
           <div class="course-card-background"></div>
 <article class="course${mode_class}" aria-labelledby="course-title-${enrollment.course_id}" id="course-card-${course_card_index}">
   % if course_card_index is 0:
-  <a class="card-link" href="http://0.0.0.0:8000/courses/${enrollment.course_id}/jump_to/${str(enrollment.course_id).replace('course', 'block')}+type@course+block@course" style="text-decoration: none;">
+  <a class="card-link" href="/courses/${enrollment.course_id}/jump_to/${str(enrollment.course_id).replace('course', 'block')}+type@course+block@course" style="text-decoration: none;">
     <div class="CustomizedCard ActivatedCustomizedCard">
       <div class="CustomizedCard__header">
         <div class="CustomizedCard__tagline"> Introduction to Data Science </div>
-        <img class="card-image" src="${static.url("images/scatter-no-canada.svg")}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}" itemprop="logo" />
+        <img class="card-image" src="https://storage.googleapis.com/learn.jigsawlabs.co/static/images/scatter-no-canada.svg" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}" itemprop="logo" />
       </div>
       <ul class="CustomizedCard__conditions">
         <li class="card-list-title"> Engineering </li>
