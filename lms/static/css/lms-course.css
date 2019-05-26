@@ -3887,7 +3887,7 @@ body.touch-based-device .xmodule_display.xmodule_CourseModule .sequence-nav ol l
 }
 
 .xmodule_display.xmodule_CourseModule .sequence-nav-button.button-previous {
-    order: -999
+    order: -999;
 }
 
 @media (min-width: 768px) {
@@ -9361,13 +9361,10 @@ body.touch-based-device .xmodule_display.xmodule_CourseModule .sequence-nav ol l
     box-sizing: border-box;
     min-width: 40px;
     flex-grow: 1;
-    border-color: #e7e7e7;
-    border-width: 1px;
-    border-top-style: solid
+    padding: 0px 20px;
 }
 
 .xmodule_display.xmodule_SequenceModule .sequence-nav ol li:not(:last-child) {
-    border-right-style: solid
 }
 
 .xmodule_display.xmodule_SequenceModule .sequence-nav ol li button {
@@ -9378,11 +9375,11 @@ body.touch-based-device .xmodule_display.xmodule_CourseModule .sequence-nav ol l
     padding: 0;
     display: block;
     text-align: center;
-    border-color: #e7e7e7;
-    border-width: 1px;
-    border-bottom-style: solid;
     box-sizing: border-box;
-    overflow: visible
+    overflow: visible;
+    border-color: #332e56;
+    border-width: 1px;
+    border-style: solid;
 }
 
 .xmodule_display.xmodule_SequenceModule .sequence-nav ol li button .icon {
@@ -9462,14 +9459,33 @@ body.touch-based-device .xmodule_display.xmodule_SequenceModule .sequence-nav ol
     text-shadow: none;
     background: none;
     background-color: #fff;
-    border-color: #e7e7e7;
+    border-color: #706c87;
+    border-width: 2px;
     box-shadow: none;
     font-size: inherit;
     font-weight: normal;
     padding: 0;
     white-space: nowrap;
-    overflow-x: hidden
+    overflow-x: hidden;
+    color: #706c87;
 }
+
+.Button-Purple {
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    opacity: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.Button-Purple:hover {
+  opacity: .8;
+}
+
 
 @media (min-width: 768px) {
     .xmodule_display.xmodule_SequenceModule .sequence-nav-button {
@@ -9574,25 +9590,6 @@ body.touch-based-device .xmodule_display.xmodule_SequenceModule .sequence-nav ol
     outline: none
 }
 
-.xmodule_display.xmodule_SequenceModule .sequence-nav-button.focused,.xmodule_display.xmodule_SequenceModule .sequence-nav-button:hover,.xmodule_display.xmodule_SequenceModule .sequence-nav-button:active,.xmodule_display.xmodule_SequenceModule .sequence-nav-button.active,.xmodule_display.xmodule_SequenceModule .sequence-nav button.focused,.xmodule_display.xmodule_SequenceModule .sequence-nav button:hover,.xmodule_display.xmodule_SequenceModule .sequence-nav button:active,.xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
-    padding-top: 2px;
-    background-color: #0075b4
-}
-
-.xmodule_display.xmodule_SequenceModule .sequence-nav-button.focused .icon,.xmodule_display.xmodule_SequenceModule .sequence-nav-button:hover .icon,.xmodule_display.xmodule_SequenceModule .sequence-nav-button:active .icon,.xmodule_display.xmodule_SequenceModule .sequence-nav-button.active .icon,.xmodule_display.xmodule_SequenceModule .sequence-nav button.focused .icon,.xmodule_display.xmodule_SequenceModule .sequence-nav button:hover .icon,.xmodule_display.xmodule_SequenceModule .sequence-nav button:active .icon,.xmodule_display.xmodule_SequenceModule .sequence-nav button.active .icon {
-    color: #fff
-}
-
-@media (min-width: 576px) {
-    .xmodule_display.xmodule_SequenceModule .sequence-nav-button.focused,.xmodule_display.xmodule_SequenceModule .sequence-nav-button:hover,.xmodule_display.xmodule_SequenceModule .sequence-nav-button:active,.xmodule_display.xmodule_SequenceModule .sequence-nav-button.active,.xmodule_display.xmodule_SequenceModule .sequence-nav button.focused,.xmodule_display.xmodule_SequenceModule .sequence-nav button:hover,.xmodule_display.xmodule_SequenceModule .sequence-nav button:active,.xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
-        border-bottom:3px solid #0075b4;
-        background-color: #fff
-    }
-
-    .xmodule_display.xmodule_SequenceModule .sequence-nav-button.focused .icon,.xmodule_display.xmodule_SequenceModule .sequence-nav-button:hover .icon,.xmodule_display.xmodule_SequenceModule .sequence-nav-button:active .icon,.xmodule_display.xmodule_SequenceModule .sequence-nav-button.active .icon,.xmodule_display.xmodule_SequenceModule .sequence-nav button.focused .icon,.xmodule_display.xmodule_SequenceModule .sequence-nav button:hover .icon,.xmodule_display.xmodule_SequenceModule .sequence-nav button:active .icon,.xmodule_display.xmodule_SequenceModule .sequence-nav button.active .icon {
-        color: #0a0a0a
-    }
-}
 
 .xmodule_display.xmodule_TextAnnotationModule .annotatable-wrapper {
     position: relative
@@ -20114,7 +20111,7 @@ body.view-in-course footer#footer-edx-v3 {
     position: relative;
     overflow: hidden;
     padding-bottom: 10px;
-    border-bottom: 1px solid #0075b4;
+    border-bottom: none;
     box-shadow: 0 1px 5px 0 rgba(0,0,0,0.1);
     background: #fff;
     line-height: 1.5
@@ -20652,4 +20649,23 @@ a.story__inner, .story-meta--main {
 
 .submenu {
   padding-top: 8%;
+}
+
+.button-oval {
+    display: flex !important;
+    align-items: center !important;
+    border-radius: 20px !important;
+    font-size: 12px !important;
+    font-family: larsseit !important;
+    letter-spacing: .75px !important;
+    padding: 10px 5px !important;
+    color: #332e56 !important;
+}
+
+.button-oval:hover {
+  background: #f1f2f7 !important;
+}
+
+.button-oval.active {
+  background: #f1f2f7 !important;
 }
