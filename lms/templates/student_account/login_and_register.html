@@ -37,6 +37,25 @@
     % endfor
 </%block>
 
+
+<div class="section-bkg-wrapper">
+    <main id="main" aria-label="Content" tabindex="-1">
+        <div id="content-container" class="login-register-content">
+            % if enable_enterprise_sidebar:
+                <%include file="enterprise_sidebar.html" />
+                <%
+                    border_class = 'border-left'
+                %>
+            % else:
+                <%
+                    border_class = ''
+                %>
+            % endif
+            <div id="login-and-registration-container" class="login-register ${border_class}">
+            </div>
+        </div>
+    </main>
+</div>
 <style>
   .toggle-form {
     display: none;
@@ -89,27 +108,13 @@
     opacity: .8;
   }
 
-  button.button.button-primary.button-oa2-auth0.login-provider.login-oa2-auth0 span:first-child:after {
-    content: 'Get Started'
-  }
+.login-register {
+  padding-top: 150px;
+}
+
+  button.button.button-primary.button-oa2-auth0.login-provider.login-oa2-auth0:after {
+    content: 'Log In and Get Started';
+}
+
 
 </style>
-
-<div class="section-bkg-wrapper">
-    <main id="main" aria-label="Content" tabindex="-1">
-        <div id="content-container" class="login-register-content">
-            % if enable_enterprise_sidebar:
-                <%include file="enterprise_sidebar.html" />
-                <%
-                    border_class = 'border-left'
-                %>
-            % else:
-                <%
-                    border_class = ''
-                %>
-            % endif
-            <div id="login-and-registration-container" class="login-register ${border_class}">
-            </div>
-        </div>
-    </main>
-</div>
