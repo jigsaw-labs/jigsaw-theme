@@ -63,15 +63,16 @@
     display: none;
   }
 
-  .login-providers.span:after {
-    content: 'Get Started';
-  }
 
   .fa.fa-sign-in {
     display: none;
   }
 
-button {
+  button.button.button-primary.button-oa2-auth0.login-provider.login-oa2-auth0 span {
+    display: none;
+  }
+
+  button.button.button-primary.button-oa2-auth0.login-provider.login-oa2-auth0 {
     color: #fff;
     cursor: pointer;
     display: inline-block;
@@ -84,10 +85,13 @@ button {
     background-color: #332e56;
 }
 
-button:hover {
-  opacity: .8;
-}
+  button.button.button-primary.button-oa2-auth0.login-provider.login-oa2-auth0:hover {
+    opacity: .8;
+  }
 
+  button.button.button-primary.button-oa2-auth0.login-provider.login-oa2-auth0 span:first-child:after {
+    content: 'Get Started'
+  }
 
 </style>
 
