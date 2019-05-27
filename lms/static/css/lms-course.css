@@ -3978,7 +3978,6 @@ body.touch-based-device .xmodule_display.xmodule_CourseModule .sequence-nav ol l
 
 @media (min-width: 576px) {
     .xmodule_display.xmodule_CourseModule .sequence-nav-button.focused,.xmodule_display.xmodule_CourseModule .sequence-nav-button:hover,.xmodule_display.xmodule_CourseModule .sequence-nav-button:active,.xmodule_display.xmodule_CourseModule .sequence-nav-button.active,.xmodule_display.xmodule_CourseModule .sequence-nav button.focused,.xmodule_display.xmodule_CourseModule .sequence-nav button:hover,.xmodule_display.xmodule_CourseModule .sequence-nav button:active,.xmodule_display.xmodule_CourseModule .sequence-nav button.active {
-        border-bottom:3px solid #0075b4;
         background-color: #fff
     }
 
@@ -9362,6 +9361,7 @@ body.touch-based-device .xmodule_display.xmodule_CourseModule .sequence-nav ol l
     min-width: 40px;
     flex-grow: 1;
     padding: 0px 20px;
+    max-width: 170px;
 }
 
 .xmodule_display.xmodule_SequenceModule .sequence-nav ol li:not(:last-child) {
@@ -10184,9 +10184,6 @@ body.touch-based-device .xmodule_display.xmodule_SequenceModule .sequence-nav ol
     box-sizing: border-box;
     min-width: 40px;
     flex-grow: 1;
-    border-color: #e7e7e7;
-    border-width: 1px;
-    border-top-style: solid
 }
 
 .xmodule_display.xmodule_SectionModule .sequence-nav ol li:not(:last-child) {
@@ -10408,7 +10405,6 @@ body.touch-based-device .xmodule_display.xmodule_SectionModule .sequence-nav ol 
 
 @media (min-width: 576px) {
     .xmodule_display.xmodule_SectionModule .sequence-nav-button.focused,.xmodule_display.xmodule_SectionModule .sequence-nav-button:hover,.xmodule_display.xmodule_SectionModule .sequence-nav-button:active,.xmodule_display.xmodule_SectionModule .sequence-nav-button.active,.xmodule_display.xmodule_SectionModule .sequence-nav button.focused,.xmodule_display.xmodule_SectionModule .sequence-nav button:hover,.xmodule_display.xmodule_SectionModule .sequence-nav button:active,.xmodule_display.xmodule_SectionModule .sequence-nav button.active {
-        border-bottom:3px solid #0075b4;
         background-color: #fff
     }
 
