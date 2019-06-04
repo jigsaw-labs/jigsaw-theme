@@ -66,7 +66,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
   <a class="card-link" href="/courses/${enrollment.course_id}/jump_to/${str(enrollment.course_id).replace('course', 'block')}+type@course+block@course" style="text-decoration: none;">
     <div class="CustomizedCard ActivatedCustomizedCard">
       <div class="CustomizedCard__header">
-        <div class="CustomizedCard__tagline"> Introduction to Data Science </div>
+        <div class="CustomizedCard__tagline"> ${HTML(course_overview.display_name)}</div>
         <img class="card-image" src="https://storage.googleapis.com/learn.jigsawlabs.co/static/images/scatter-no-canada.svg" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}" itemprop="logo" />
       </div>
       <ul class="CustomizedCard__conditions">
@@ -84,7 +84,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
   <a class="card-link" href="/courses/${enrollment.course_id}/jump_to/${str(enrollment.course_id).replace('course', 'block')}+type@course+block@course" style="text-decoration: none;">
     <div class="CustomizedCard" style="">
       <div class="CustomizedCard__header">
-        <div class="CustomizedCard__tagline"> Data Science and Machine Learning </div>
+        <div class="CustomizedCard__tagline"> ${HTML(course_overview.display_name)}</div>
         <div class="placeholder" style="height: 100px;"> </div>
       </div>
       <ul class="CustomizedCard__conditions">
