@@ -81,8 +81,8 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
     </div>
   </a>
   % else:
-  <div class="card-link" href="" style="text-decoration: none;">
-    <div class="CustomizedCard" style="background: gray;">
+  <a class="card-link" href="/courses/${enrollment.course_id}/jump_to/${str(enrollment.course_id).replace('course', 'block')}+type@course+block@course" style="text-decoration: none;">
+    <div class="CustomizedCard" style="">
       <div class="CustomizedCard__header">
         <div class="CustomizedCard__tagline"> Data Science and Machine Learning </div>
         <div class="placeholder" style="height: 100px;"> </div>
@@ -108,7 +108,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
         <li class="CustomizedCard__condition "> Data Visualization </li>
       </ul>
     </div>
-  </div>
+  </a>
   % endif
   <% course_target = reverse(course_home_url_name(course_overview.id), args=[unicode(course_overview.id)]) %>
   % if 1 is 2:
