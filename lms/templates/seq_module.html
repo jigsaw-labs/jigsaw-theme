@@ -28,7 +28,10 @@
 .tabs a:hover {
   border-bottom-color: #363636;
   color: #363636;
+  cursor: pointer;
 }
+
+.tabs li { cursor: pointer; }
 
 .tabs li {
   display: block;
@@ -171,7 +174,7 @@
 
   % if len(items) > 1:
   <div class="tabs">
-      <ul id="sequence-list" role="tablist" style="display: flex; justify-content: space-evenly;">
+      <ul id="sequence-list" role="tablist"  style="justify-content: space-evenly;">
         % if gated_content['gated']:
         <li>
           <a class="is-active nav-item tab" title="${_('Content Locked')}" id="tab_0" role="tab" tabindex="-1"
@@ -203,8 +206,7 @@
                 aria-hidden="true"
               ></span>
             % endif
-            <span style="margin: auto;"> ${item['page_title']}</span>
-            <span class="fa fa-fw fa-bookmark bookmark-icon ${"is-hidden" if not item['bookmarked'] else "bookmarked"}" aria-hidden="true"></span>
+            ${item['page_title']}
           </a>
         </li>
         % endfor

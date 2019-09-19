@@ -21,7 +21,6 @@ from openedx.core.lib.courses import course_image_url
 
 <%block name="bodyclass">view-in-course view-courseware courseware ${course.css_class or ''}</%block>
 
-
 <%block name="title">
   <title>
     ${static.get_page_title_breadcrumbs(course_name())}
@@ -102,7 +101,7 @@ ${HTML(fragment.foot_html())}
 <link rel="stylesheet" href="https://storage.googleapis.com/learn.jigsawlabs.co/static/css/notebook.css" title="" type="text/css">
 <div class="container">
   <div class="row">
-    <div class="nav col-sm-3" style="margin-top: 13px;z-index: 8;top: 0;position: fixed; padding-right: 0px;">
+    <div class="nav col-sm-2" style="margin-top: 13px;z-index: 8;top: 0;position: fixed; padding-right: 0px;">
       <div class="hamburger-menu"> </div>
       <div class="nav-edition" style="padding-right: 0px;">
         <div class="bubble bubble--edition">
@@ -118,8 +117,8 @@ ${HTML(fragment.foot_html())}
       </div>
     </div>
 
-    <section style="margin-left: 10%; margin-right: 15%;">
-      <div class="course-content" id="course-content">
+    <section >
+      <div class="course-content offset-sm-2" id="course-content">
         <main id="main" aria-label="Content" tabindex="-1">
         % if getattr(course, 'entrance_exam_enabled') and \
         getattr(course, 'entrance_exam_minimum_score_pct') and \
