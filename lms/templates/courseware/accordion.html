@@ -46,6 +46,7 @@
 .menu-list a.is-active {
   background-color: #3273dc;
   color: #fff !important;
+  margin-right: 10px;
 }
 
 .menu-list li {
@@ -191,8 +192,10 @@ else:
     aria_label = section['display_name']
     active_class = ''
   %>
-
-  <li> <a class="${active_class}">${section['display_name']}</a> </li>
+  <li>
+    <a class="${active_class}" href="${reverse('courseware_section', args=[course_id, chapter['url_name'], section['url_name']])}">
+    ${section['display_name']}</a>
+  </li>
   % endfor
   </ul>
 </%def>
