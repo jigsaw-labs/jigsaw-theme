@@ -183,7 +183,16 @@ else:
   </p>
   <ul class="menu-list">
   % for section in chapter['sections']:
-  <li> <a>${section['display_name']}</a> </li>
+  <%
+  if section.get('active'):
+    aria_label = _('{section} current section').format(section=section['display_name'])
+    active_class = 'is-active'
+  else:
+    aria_label = section['display_name']
+    active_class = ''
+  %>
+
+  <li> <a class="${active_class}">${section['display_name']}</a> </li>
   % endfor
   </ul>
 </%def>
