@@ -39,57 +39,62 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
         )}
     % endif
 
-    <div class="col-sm-2">
-      hello
-    </div>
+      <div class="nav col-sm-2 is-active" style="margin-top: 13px;z-index: 8;top: 0; padding-right: 0px; padding-top: 56px;">
+        <div class="hamburger-menu"> </div>
+        <div class="nav-edition" style="padding-right: 0px;">
+          <div class="bubble bubble--edition">
+          </div>
+        <div class="nav-title" style="margin-top: -6px; margin-left: 19px; color: #332E56; font-size: 15px; line-height: 1.1;">${course.display_name_with_default}</div>
+        </div>
+      </div>
 
-    <div class="main-header col-sm-10 ">
+      <div class="main-header col-sm-10 ">
         <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
         % if user.is_authenticated:
-            <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
+        <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
         % else:
-            <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
+        <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
         % endif
-    </div>
-    <div class="mobile-menu hidden" aria-label=${_("More Options")} role="menu" id="mobile-menu"></div>
+      </div>
+      <div class="mobile-menu hidden" aria-label=${_("More Options")} role="menu" id="mobile-menu"></div>
 </header>
 
 % if course:
 <!--[if lte IE 9]>
-<div class="ie-banner" aria-hidden="true">${Text(_('{begin_strong}Warning:{end_strong} Your browser is not fully supported. We strongly recommend using {chrome_link} or {ff_link}.')).format(
-    begin_strong=HTML('<strong>'),
-    end_strong=HTML('</strong>'),
-    chrome_link=HTML('<a href="https://www.google.com/chrome" target="_blank">Chrome</a>'),
-    ff_link=HTML('<a href="http://www.mozilla.org/firefox" target="_blank">Firefox</a>'),
-)}</div>
+  <div class="ie-banner" aria-hidden="true">${Text(_('{begin_strong}Warning:{end_strong} Your browser is not fully supported. We strongly recommend using {chrome_link} or {ff_link}.')).format(
+  begin_strong=HTML('<strong>'),
+  end_strong=HTML('</strong>'),
+  chrome_link=HTML('<a href="https://www.google.com/chrome" target="_blank">Chrome</a>'),
+  ff_link=HTML('<a href="http://www.mozilla.org/firefox" target="_blank">Firefox</a>'),
+  )}</div>
 <![endif]-->
 % endif
 
 % if settings.FEATURES.get('ENABLE_COOKIE_CONSENT', False):
-  <%include file="../widgets/cookie-consent.html" />
+<%include file="../widgets/cookie-consent.html" />
 % endif
 
 % if header_language_selector_is_enabled():
-    <% languages = released_languages() %>
-    % if len(languages) > 1:
-        <form action="/i18n/setlang/" method="post" class="settings-language-form" id="language-settings-form">
-            <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}">
-            % if user.is_authenticated:
-                <input title="preference api" type="hidden" class="url-endpoint" value="${reverse('preferences_api', kwargs={'username': user.username})}" data-user-is-authenticated="true">
-            % else:
-                <input title="session update url" type="hidden" class="url-endpoint" value="${reverse('session_language')}" data-user-is-authenticated="false">
-            % endif
-            <label><span class="sr">${_("Choose Language")}</span>
-            <select class="input select language-selector" id="settings-language-value" name="language">
-                % for language in languages:
-                    % if language[0] == LANGUAGE_CODE:
-                        <option value="${language[0]}" selected="selected">${language[1]}</option>
-                    % else:
-                        <option value="${language[0]}" >${language[1]}</option>
-                    % endif
-                % endfor
-            </select>
-            </label>
-        </form>
+<% languages = released_languages() %>
+% if len(languages) > 1:
+<form action="/i18n/setlang/" method="post" class="settings-language-form" id="language-settings-form">
+  <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}">
+  % if user.is_authenticated:
+  <input title="preference api" type="hidden" class="url-endpoint" value="${reverse('preferences_api', kwargs={'username': user.username})}" data-user-is-authenticated="true">
+  % else:
+  <input title="session update url" type="hidden" class="url-endpoint" value="${reverse('session_language')}" data-user-is-authenticated="false">
+  % endif
+  <label><span class="sr">${_("Choose Language")}</span>
+    <select class="input select language-selector" id="settings-language-value" name="language">
+    % for language in languages:
+    % if language[0] == LANGUAGE_CODE:
+    <option value="${language[0]}" selected="selected">${language[1]}</option>
+    % else:
+    <option value="${language[0]}" >${language[1]}</option>
     % endif
+    % endfor
+    </select>
+  </label>
+</form>
+% endif
 % endif
