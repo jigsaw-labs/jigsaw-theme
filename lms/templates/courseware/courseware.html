@@ -103,7 +103,7 @@ ${HTML(fragment.foot_html())}
   <div class="row">
     <div class="nav col-sm-2 is-active" style="top: 0;">
       <div class="hamburger-menu"> </div>
-      <div class="nav-menu col-sm-2" style="background: #fafafa" style="min-width: 0px;">
+      <div class="nav-menu " style="background: #fafafa; min-width: 0px;">
         % if accordion.strip():
         ${HTML(accordion)}
         % else:
@@ -112,7 +112,7 @@ ${HTML(fragment.foot_html())}
       </div>
     </div>
 
-      <div class="course-content col-sm-10" id="course-content" style="margin-top: 8%;">
+      <div class="course-content col-sm-9" id="course-content" style="margin-top: 3%;">
         <main id="main" aria-label="Content" tabindex="-1">
         % if getattr(course, 'entrance_exam_enabled') and \
         getattr(course, 'entrance_exam_minimum_score_pct') and \
@@ -148,10 +148,7 @@ ${HTML(fragment.foot_html())}
           </main>
         </div>
 
-      <section class="courseware-results-wrapper col-md-9">
-          <div id="loading-message" aria-live="polite" aria-relevant="all"></div>
-          <div id="error-message" aria-live="polite"></div>
-          <div class="courseware-results search-results col-md-12" data-course-id="${course.id}" data-lang-code="${language_preference}"></div>
+      <section class="col-sm-1">
       </section>
 
     </div>
