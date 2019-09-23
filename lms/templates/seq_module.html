@@ -14,10 +14,7 @@
 
 .tabs a {
   align-items: center;
-  border-bottom-color: #dbdbdb;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  color: #4a4a4a;
+  color: #332e56;
   display: flex;
   justify-content: center;
   margin-bottom: -1px;
@@ -25,10 +22,11 @@
   vertical-align: top;
 }
 
-.tabs a:hover {
-  border-bottom-color: #363636;
-  color: #363636;
+.tabs li a:hover {
+      background: #dbdbdb;
+    border-radius: 4px;
   cursor: pointer;
+  color: #332e56;
 }
 
 .tabs li { cursor: pointer; }
@@ -38,8 +36,9 @@
 }
 
 .tabs li a.active {
-  border-bottom-color: #3273dc;
-  color: #3273dc;
+  color: white;
+  background: #332e56;
+  border-radius: 4px;
 }
 
 .tabs ul {
@@ -78,8 +77,8 @@
 }
 
 .tabs.is-boxed li.active a {
-  background-color: white;
-  border-color: #dbdbdb;
+  background-color: #332e56;
+  border-radius: 4px;
   border-bottom-color: transparent !important;
 }
 
