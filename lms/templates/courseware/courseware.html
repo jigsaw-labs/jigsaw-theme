@@ -113,6 +113,7 @@ ${HTML(fragment.foot_html())}
     </div>
 
       <div class="course-content col-sm-9" id="course-content" style="margin-top: 3%;">
+
         <main id="main" aria-label="Content" tabindex="-1">
         % if getattr(course, 'entrance_exam_enabled') and \
         getattr(course, 'entrance_exam_minimum_score_pct') and \
@@ -143,8 +144,16 @@ ${HTML(fragment.foot_html())}
                 </p>
                 % endif
             % endif
-
+        <div class="row" style="padding-top: 18px; font-size: 2.3rem">
+          % if section:
+          <h2 class="" style="padding-left: 67px;">
+            ${section.display_name_with_default}
+          </h2>
+          % endif
+        </div>
+        <div style="padding-top: 30px">
             ${HTML(fragment.body_html())}
+        </div>
           </main>
         </div>
 
