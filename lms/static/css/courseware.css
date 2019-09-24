@@ -2,6 +2,10 @@
 display: flex !important;
 }
 
+.course-content {
+  padding-right: 85px;
+}
+
 
 
 .span.group-heading {
@@ -84,6 +88,20 @@ p.accordion-display-name:hover {
 
 /* Navbar */
 
+@media(min-width: 768px){
+  .nav {
+    display: block;
+    margin-top: -1px;
+    z-index: 8;
+    position: fixed;
+    bottom: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-left: 1px solid hsla(0,0%,59%,.27);
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
 
 
 .nav, .nav-arrow__wrapper {

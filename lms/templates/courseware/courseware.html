@@ -104,7 +104,7 @@ ${HTML(fragment.foot_html())}
 <link rel="stylesheet" href="https://storage.googleapis.com/learn.jigsawlabs.co/static/css/notebook.css" title="" type="text/css">
 <div class="container">
   <div class="row">
-    <div class="nav sidebar-js col-sm-2 is-active" style="left: -15px;">
+    <div class="nav sidebar-js col-sm-2 is-active" style="left: -15px; padding-left: 15px; padding-right: 0px;">
       <div class="nav-menu " style="background: #fafafa; min-width: 0px;">
         % if accordion.strip():
         ${HTML(accordion)}
@@ -174,7 +174,18 @@ ${HTML(fragment.foot_html())}
     let navigation = $('.sidebar-js')
     let courseContent = $('.course-content')
     navigationButton.on('click', function(){
-      navigation.toggleClass('collapsed')
+      navigationButton.toggleClass('is-active')
+      if(navigationButton.hasClass('is-active')){
+          courseContent.addClass('col-sm-9')
+          courseContent.removeClass('col-sm-11')
+        $('.sidebar-js').toggle( "slide")
+      }else{
+        $('.sidebar-js').toggle( "slide", function(){
+          courseContent.removeClass('col-sm-9')
+          courseContent.addClass('col-sm-11')
+        })
+      }
+
     })
 
 
