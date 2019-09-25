@@ -426,10 +426,6 @@ a {
   display: none;
 }
 
-.global-header .header-logo a {
-    margin-left: 24%;
-}
-
 .header-logo a {
     padding-left: 25px;
     border-left: 1px solid hsla(0,0%,59%,.27);

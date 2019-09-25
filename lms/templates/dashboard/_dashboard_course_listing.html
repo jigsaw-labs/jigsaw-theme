@@ -60,57 +60,30 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
           lang="${course_overview.language}"
         % endif
           >
-          <div class="course-card-background"></div>
+          <div style="height: 340px;"class="course-card-background"></div>
 <article class="course${mode_class}" aria-labelledby="course-title-${enrollment.course_id}" id="course-card-${course_card_index}">
-  % if course_card_index is 0:
   <a class="card-link" href="/courses/${enrollment.course_id}/jump_to/${str(enrollment.course_id).replace('course', 'block')}+type@course+block@course" style="text-decoration: none;">
     <div class="CustomizedCard ActivatedCustomizedCard">
       <div class="CustomizedCard__header">
         <div class="CustomizedCard__tagline"> ${HTML(course_overview.display_name)}</div>
-        <img class="card-image" src="https://storage.googleapis.com/learn.jigsawlabs.co/static/images/scatter-no-canada.svg" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}" itemprop="logo" />
+        <img class="card-image" style="width: 51%; padding-top: 20px;"src="${course_overview.course_image_url}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}" itemprop="logo" />
       </div>
+      % if course_overview.short_description:
       <ul class="CustomizedCard__conditions">
-        <li class="card-list-title"> Engineering </li>
-        <li class="card-list-title"> Statistics </li>
+        % for topic in course_overview.short_description.split(', '):
+        <li class="CustomizedCard__condition"> ${topic} </li>
+        % endfor
       </ul>
-      <ul class="CustomizedCard__conditions">
-        <li class="CustomizedCard__condition "> APIs </li>
-        <li class="CustomizedCard__condition "> Linear Regression </li>
-        <li class="CustomizedCard__condition "> Python Fundamentals </li>
-      </ul>
+      % endif
     </div>
   </a>
-  % else:
-  <a class="card-link" href="/courses/${enrollment.course_id}/jump_to/${str(enrollment.course_id).replace('course', 'block')}+type@course+block@course" style="text-decoration: none;">
-    <div class="CustomizedCard" style="">
-      <div class="CustomizedCard__header">
-        <div class="CustomizedCard__tagline"> ${HTML(course_overview.display_name)}</div>
-        <div class="placeholder" style="height: 100px;"> </div>
-      </div>
-      <ul class="CustomizedCard__conditions">
-        <li class="card-list-title"> Engineering </li>
-        <li class="card-list-title"> Machine Learning </li>
-      </ul>
-      <ul class="CustomizedCard__conditions">
-        <li class="CustomizedCard__condition "> OOP in Python </li>
-        <li class="CustomizedCard__condition "> Linear Regression </li>
-        <li class="CustomizedCard__condition "> SQL </li>
-        <li class="CustomizedCard__condition "> Logistic Regression </li>
-        <li class="CustomizedCard__condition "> Scraping, APIs </li>
-        <li class="CustomizedCard__condition "> Decision Trees </li>
-      </ul>
-      <ul class="CustomizedCard__conditions">
-        <li class="card-list-title-bi"> Business Intelligence/Projects </li>
-      </ul>
-      <ul class="CustomizedCard__conditions">
-        <li class="CustomizedCard__condition "> Decision Analysis </li>
-        <li class="CustomizedCard__condition "> Storytelling</li>
-        <li class="CustomizedCard__condition "> Data Visualization </li>
-      </ul>
-    </div>
-  </a>
-  % endif
   <% course_target = reverse(course_home_url_name(course_overview.id), args=[unicode(course_overview.id)]) %>
+
+
+
+
+
+
   % if 1 is 2:
   <section class="details" aria-labelledby="details-heading-${enrollment.course_id}">
       <h2 class="hd hd-2 sr" id="details-heading-${enrollment.course_id}">${_('Course details')}</h2>
