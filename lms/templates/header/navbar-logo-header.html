@@ -15,7 +15,7 @@ from branding import api as branding_api
 
 <h1 class="header-logo">
 
-  <a href="${branding_api.get_home_url()}" style="margin-left: -21px;">
+  <a href="${branding_api.get_home_url()}" style="margin-left: ${'0px;' if course else '15px;'}">
     <%block name="navigation_logo">
     <img style="margin-left: 0%;" class="logo" src="https://storage.googleapis.com/learn.jigsawlabs.co/static/images/logo.png" style="margin-left: 0px;" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
     </%block>
