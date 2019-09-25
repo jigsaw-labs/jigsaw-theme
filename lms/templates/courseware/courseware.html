@@ -26,7 +26,7 @@ from openedx.core.lib.courses import course_image_url
 
 <%block name="title">
   <title>
-    ${static.get_page_title_breadcrumbs(course_name())}
+    ${static.get_page_title_breadcrumbs(course_name())} Jigsaw Labs
   </title>
 </%block>
 
@@ -253,6 +253,26 @@ ${HTML(fragment.foot_html())}
       let iframeSrc = jupyterLabIframe.src.replace(/(?<=user)\/.*?\//, userNameSrc)
       jupyterLabIframe.src = iframeSrc;
       })
+    }
+
+
+    if(window.attachEvent) {
+      window.attachEvent('onload', yourFunctionName);
+    } else {
+      if(window.onload) {
+        var curronload = window.onload;
+        var newonload = function(evt) {
+          curronload(evt);
+          changeTitle(evt);
+        };
+        window.onload = newonload;
+      } else {
+        window.onload = changeTitle;
+      }
+    }
+
+    function changeTitle(){
+      window.document.title = window.document.title + ' Jigsaw Labs'
     }
 
   </script>
