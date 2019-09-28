@@ -1,0 +1,99 @@
+<%page expression_filter="h"/>
+<%inherit file="main.html" />
+<%namespace name='static' file='static_content.html'/>
+<%!
+from django.utils.translation import ugettext as _
+from django.urls import reverse
+
+from openedx.core.djangolib.markup import HTML, Text
+%>
+
+<style type="text/css" media="all">
+@media (min-width: 768px)
+.Intro--new .Intro__content {
+  max-width: none;
+  margin: 0;
+  padding-left: 100px;
+  padding-top: 25px;
+  width: 1000px;
+}
+
+.Section--even {
+    padding: 53px 33px;
+}
+
+.Intro__title {
+    font-size: 46px;
+    color: #332e56;
+    font-family: Georgia,TimesNewRoman,Times New Roman,Times,Baskerville,serif;
+    line-height: 1.2;
+    text-align: left;
+}
+
+p.tag_line {
+  color: #706c87;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.Button {
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1;
+    opacity: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.Button a {
+    color: #fff;
+    display: block;
+    padding: 20px 15px;
+    text-decoration: none;
+}
+
+.Button.Button__purple {
+    background-color: #332e56;
+}
+
+.Intro__cta {
+    display: flex;
+    align-items: center;
+}
+
+.title-link {
+    padding-left: 17px;
+    color: #706c87;
+}
+
+</style>
+
+<main id="main" aria-label="Content" tabindex="">
+<section class="" style="height: 735px; background: #f1f2f7">
+  <div class="row" style="padding-top: 187px;">
+    <div class="col-sm-6 offset-sm-2">
+      <div class="Section--even">
+        <h1 class="Intro__title " style="color: #332e56;">
+          Become data driven.
+        </h1>
+        <div class="Intro__body col-sm-8" style="padding-left: 0px; padding-top: 30px; padding-bottom: 30px;">
+          <p class="tag_line">
+          Hands on learning in acquiring and answering questions with data.
+          </p>
+        </div>
+        <div class="Intro__cta">
+          <div class="Button Button__purple" style="color: white;">
+            <a style="color: white !important;" href="http://learn.jigsawlabs.co/account/finish_auth?course_id=course-v1:jigsawlabs+11+22&amp;enrollment_action=enroll&amp;email_opt_in=false">Start Learning For Free </a>
+          </div>
+          <a class="title-link" style="color: #706c87"href="https://www.jigsawlabs.io/applications/new"> Start Your Application </a>
+        </div>
+      </div>
+    </div>
+    <div class="col"></div>
+  </div>
+</section>
+</main>
+
