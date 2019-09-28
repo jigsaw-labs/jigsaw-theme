@@ -50,7 +50,7 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
         </div>
       </div>
       % endif
-      <div class="main-header ${'col-sm-10' if course else 'col-sm-12'}" style="padding-left: 15px;" >
+      <div class="main-header ${'col-sm-10' if course else 'col-sm-12'}" style="" >
           <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
           % if user.is_authenticated:
           <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
