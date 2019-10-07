@@ -31,6 +31,11 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
     </%block>
 % endif
 
+<style>
+ .nav-edition:before {
+  left: 11%;
+ }
+</style>
 <header class="global-header row shadow ${'slim' if course else ''}" style="width: auto; padding-bottom: 0px;">
     % if use_cookie_banner:
         ${static.renderReact(
@@ -43,10 +48,10 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
     % if course:
       <div class="nav col-sm-2 is-active" style="margin-top: 13px;z-index: 8;top: 0; padding-right: 0px; padding-top: 56px;">
         <div class="hamburger-menu"> </div>
-        <div class="nav-edition is-active" style="padding-right: 0px; padding-top: 13px;">
+        <div class="nav-edition is-active" style="padding-right: 0px; padding-top: 5px; padding-left: 15px;">
           <div class="bubble bubble--edition" style="padding-left: 12px;">
           </div>
-        <div class="nav-title" style="color: #332E56; font-size: 15px; line-height: 1.3; padding-left: 10px;">${course.display_name_with_default}</div>
+        <div class="nav-title" style="color: #332E56; font-size: 15px; line-height: 1.3; padding-left: 20%;">${course.display_name_with_default}</div>
         </div>
       </div>
       % endif

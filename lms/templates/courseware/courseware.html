@@ -3,7 +3,14 @@
 <%namespace name='static' file='/static_content.html'/>
 <link href="https://storage.googleapis.com/learn.jigsawlabs.co/static/css/courseware_sidebar.css" type="stylesheet" />
 
+<style type="text/css" media="all">
+#seq_content .xblock-student_view {
+      padding-right: 4%;
+    padding-left: 5%;
 
+}
+
+</style>
 
 <%def name="online_help_token()"><% return "courseware" %></%def>
 <%!
@@ -153,12 +160,12 @@ ${HTML(fragment.foot_html())}
             % endif
         <div class="row" style="padding-top: 18px; font-size: 2.3rem">
           % if section:
-          <h2 class="" style="padding-left: 40px; color: #332e56; letter-spacing: 2px; font-size: 40px;">
+          <h2 class="" style="padding-left: 9%; color: #332e56; letter-spacing: 2px; font-size: 40px;">
             ${section.display_name_with_default}
           </h2>
           % endif
         </div>
-        <div style="padding-top: 30px; padding-left: 30px;">
+        <div style="padding-top: 30px;">
             ${HTML(fragment.body_html())}
         </div>
           </main>
@@ -210,14 +217,19 @@ ${HTML(fragment.foot_html())}
 
     .vert-mod .iframe-wrapper {
       overflow: hidden;
-      margin-left: -100px;
+      margin-left: -261;
+    }
+
+    .vert {
+      width: 104%;
     }
 
     iframe[src^="https://desktop.jigsawlabs"] {
       top: -132px;
       position: relative;
-      width: 115%;
+      width: 96%;
       overflow: hidden;
+      margin-left: 9%;
     }
 
     .sidebar-js {
